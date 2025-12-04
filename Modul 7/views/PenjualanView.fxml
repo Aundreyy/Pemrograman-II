@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PenjualanController">
+   <children>
+      <ComboBox fx:id="cbPelanggan" layoutX="20.0" layoutY="20.0" prefWidth="200.0" promptText="Pilih Pelanggan" />
+      <ComboBox fx:id="cbBuku" layoutX="230.0" layoutY="20.0" prefWidth="200.0" promptText="Pilih Buku" />
+      
+      <TextField fx:id="txtJumlah" layoutX="20.0" layoutY="60.0" prefWidth="200.0" promptText="Masukkan Jumlah" />
+      <DatePicker fx:id="dpTanggal" layoutX="230.0" layoutY="60.0" prefWidth="200.0" promptText="Pilih Tanggal" />
+      
+      <Button layoutX="440.0" layoutY="60.0" onAction="#add" text="Simpan Transaksi" />
+      <Button layoutX="560.0" layoutY="60.0" onAction="#delete" text="X" />
+
+      <TableView fx:id="table" layoutX="20.0" layoutY="100.0" prefHeight="280.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="colPelanggan" text="Nama Pelanggan" prefWidth="120"/>
+          <TableColumn fx:id="colBuku" text="Judul Buku" prefWidth="120"/>
+          
+          <TableColumn fx:id="colJumlah" text="Jumlah" prefWidth="60"/>
+          <TableColumn fx:id="colTotal" text="Total Harga" prefWidth="100"/>
+          <TableColumn fx:id="colTanggal" text="Tanggal" prefWidth="100"/>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

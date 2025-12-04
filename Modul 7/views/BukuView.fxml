@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BukuController">
+   <children>
+      <TextField fx:id="txtJudul" layoutX="20.0" layoutY="20.0" promptText="Judul" />
+      <TextField fx:id="txtPenulis" layoutX="180.0" layoutY="20.0" promptText="Penulis" />
+      <TextField fx:id="txtHarga" layoutX="20.0" layoutY="60.0" promptText="Harga" prefWidth="80"/>
+      <TextField fx:id="txtStok" layoutX="110.0" layoutY="60.0" promptText="Stok" prefWidth="60"/>
+
+      <Button layoutX="180.0" layoutY="60.0" onAction="#add" text="Add" />
+      <Button layoutX="230.0" layoutY="60.0" onAction="#update" text="Edit" />
+      <Button layoutX="280.0" layoutY="60.0" onAction="#delete" text="Del" />
+
+      <TableView fx:id="table" layoutX="20.0" layoutY="100.0" prefHeight="280.0" prefWidth="460.0">
+        <columns>
+          <TableColumn fx:id="colJudul" text="Judul" prefWidth="150"/>
+          <TableColumn fx:id="colPenulis" text="Penulis" prefWidth="100"/>
+          <TableColumn fx:id="colHarga" text="Harga" prefWidth="100"/>
+          <TableColumn fx:id="colStok" text="Stok" prefWidth="50"/>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
